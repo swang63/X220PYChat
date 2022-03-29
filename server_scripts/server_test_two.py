@@ -8,24 +8,30 @@ MAX_BYTE_SIZE = 1024
 TOTAL_SOCKETS = 2
 
 socket_list = []
+chat = ChatManager()
 
 sel = selectors.DefaultSelector()
 
 def accept(gate, mask):
 	connectionSocket, addr = gate.accept()
+
+	chat.set_address(addr[0])
 	
 	connectionSocket.setblocking(False)
 	sel.register(connectionSocket, selectors.EVENT_READ, read)
 	
 def read(connection, mask):
 	sentence = connection.recv(MAX_BYTE_SIZE)
+	host, port = connection.getpeername()
 	
-	   
 	if sentence:
 		sentence = sentence.decode()
 		
+		# GET THE IP's CHAT NUMBER
+		chat_number = chat.get_user(host)
+		
 		# SEND TO CHAT OBJECT
-		sentence = "[" + str(mask) + "] " + sentence
+		sentence = "[" + str(chat_number) + "] " + sentence
 		chat.insert_message(sentence)
 		allSentences = chat.return_messages()
 		   
@@ -40,8 +46,6 @@ if len(sys.argv) != 2:
    exit()
    
 address = str(sys.argv[1])
-
-chat = ChatManager()
 
 gate = GateSocket(address)
 gate.bind(0)
