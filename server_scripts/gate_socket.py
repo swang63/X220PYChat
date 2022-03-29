@@ -15,9 +15,10 @@ class GateSocket:
 		self.ser_socket = socket(AF_INET,SOCK_STREAM)
 		self.IP_bind = server_IP
 		
-	def bind(self):
-		self.ser_socket.bind((self.IP_bind,PORT))
+	def bind(self, index):
+		self.ser_socket.bind((self.IP_bind,PORT+index))
 		self.ser_socket.listen(1)
+		self.ser_socket.setblocking(False)
 		print("The server is ready to receive")
 		
 	def accept(self):
@@ -25,3 +26,6 @@ class GateSocket:
 		
 	def close(self):
 		self.ser_socket.close()
+		
+	def get_socket(self):
+		return self.ser_socket
