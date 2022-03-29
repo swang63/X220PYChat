@@ -13,6 +13,6 @@ client.connect()
 
 sentence = input("Type a sentence:")
 
-client.send(0, "User", sentence)
+client.send("User", sentence)
 
 client.close()
