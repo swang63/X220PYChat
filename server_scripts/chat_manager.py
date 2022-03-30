@@ -13,6 +13,7 @@ class ChatManager:
 	def __init__(self):
 		self.chat_messages = []
 		self.users = {}
+		self.usernames = {}
 
 	def insert_message(self, message):
 		self.chat_messages.append(message)
@@ -47,6 +48,7 @@ class ChatManager:
 					new_address_flag = False
 					
 			self.users[address] = new_user
+			self.usernames[new_user] = ""
 
 	def get_user(self, address):
 		try:
@@ -55,4 +57,13 @@ class ChatManager:
 			print("No user ID was found!")
 			self.set_address(address)
 			return get_user(address)
+		
+	def get_usernames(self):
+		return str(self.usernames)
+	
+	def set_username(self, user_number, new_name):
+		try:
+			self.usernames[user_number] = new_name
+		except:
+			pritn("No user number was found!")
 		
