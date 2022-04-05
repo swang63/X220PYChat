@@ -11,8 +11,16 @@ IP_address = str(sys.argv[1])
 client = ClientSocket(IP_address)
 client.connect()
 
-sentence = input("Type a sentence:")
+flag = True
 
-client.send("User", sentence)
+sentence = None
+
+while (flag):
+	sentence = input("Type a sentence:")
+
+	if (sentence == "/exit"):
+		flag = False
+	else:
+		client.send("User", sentence)
 
 client.close()
