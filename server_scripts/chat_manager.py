@@ -65,5 +65,5 @@ class ChatManager:
 		try:
 			self.usernames[user_number] = new_name
 		except:
-			pritn("No user number was found!")
+			print("No user number was found!")
 		
