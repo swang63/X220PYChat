@@ -26,7 +26,8 @@ class ClientSocket:
 		sentence = name + ": " + message
 		self.cli_socket.send(sentence.encode())
 		modifiedSentence = self.cli_socket.recv(1024)
-		print ("Server Chat:\n", modifiedSentence.decode())
+		#print ("Server Chat:\n", modifiedSentence.decode())
+		return modifiedSentence.decode()
 	
 	def close(self):
 		self.cli_socket.close()

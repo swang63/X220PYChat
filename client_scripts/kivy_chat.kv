@@ -1,0 +1,66 @@
+# Filename: kivy_chat.kv
+
+<ChatGrid>:
+	username: username
+	message: message
+	
+	user_list: user_list
+	chat_log: chat_log
+	
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+			size_hint_y: 4
+			
+			ScrollView:
+				size_hint_x: 3
+				do_scroll_x: False
+				do_scroll_y: True
+				
+				Label:
+					id: chat_log
+					halign:"left"
+					text: ""
+
+            BoxLayout:
+				cols:1
+				orientation:"vertical"
+				
+				TextInput:
+					id: username
+					size_hint_y: 1
+					multiline:False
+				
+				Label:
+					text: "Users"
+					size_hint_y: 1
+					
+				Label:
+					id: user_list
+					text: " "
+					size_hint_y: 6
+					
+				Button:
+					size_hint_y: 1
+					text:"Get Current Users"
+					on_press: root.get_users()
+				
+				Button:
+					size_hint_y: 1
+					text:"Get Messages"
+					on_press: root.get_messages()
+					
+		BoxLayout:
+			cols:2
+			
+			TextInput:
+				id: message
+				size_hint_x: 2
+                multiline:True
+			
+			Button:
+				text:"Submit"
+				on_press: root.send_message()

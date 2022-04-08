@@ -24,6 +24,9 @@ class ChatManager:
 		for message in self.chat_messages:
 			all_messages = all_messages + message + '\n'
 			
+		if (all_messages == ""):
+			all_messages = "No messages returned"
+			
 		return all_messages
     
 	def set_address(self, address):

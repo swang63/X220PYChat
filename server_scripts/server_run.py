@@ -4,7 +4,7 @@ from chat_manager import ChatManager
 import sys
 import selectors
 
-MAX_BYTE_SIZE = 1024
+MAX_BYTE_SIZE = 4096
 TOTAL_SOCKETS = 2
 
 socket_list = []
@@ -63,10 +63,11 @@ def read(connection, mask):
 		connection.close()
 
 # incase of no IP
-if len(sys.argv) != 2:
-   exit()
+# if len(sys.argv) != 2:
+#   exit()
    
-address = str(sys.argv[1])
+# address = str(sys.argv[1])
+address = "0.0.0.0"
 
 gate = GateSocket(address)
 gate.bind(0)
