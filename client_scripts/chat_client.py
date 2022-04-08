@@ -25,7 +25,7 @@ IP_address = "144.202.8.209"
 client = ClientSocket(IP_address)
 
 
-chat_layout = Builder.load_file('kivy_chat.kv')
+chat_layout = Builder.load_file('chat_gui.kv')
 
 class ChatGrid(Widget):
 	username = ObjectProperty(None)
@@ -57,7 +57,7 @@ class ChatGrid(Widget):
 		self.message.text = ""
 
 
-class MyApp(App): # <- Main Class
+class ChatClient(App):
     def build(self):
         return ChatGrid()
 
@@ -66,7 +66,7 @@ class MyApp(App): # <- Main Class
 if __name__ == "__main__":
 	client.connect()
 
-	MyApp().run()
+	ChatClient().run()
 	
 	client.close()
 	
