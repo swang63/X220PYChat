@@ -1,5 +1,7 @@
 from random import randint
 
+MAX_MESSAGES = 30
+
 class ChatManager:
 	"""
 	chat for server
@@ -16,6 +18,9 @@ class ChatManager:
 		self.usernames = {}
 
 	def insert_message(self, message):
+		if (len(self.chat_messages) > MAX_MESSAGES):
+			del self.chat_messages[0]
+			
 		self.chat_messages.append(message)
 		
 	def return_messages(self) -> str:
