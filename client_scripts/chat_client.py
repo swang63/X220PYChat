@@ -39,11 +39,6 @@ class ChatGrid(Widget):
 		
 		self.user_list.text = client.send("", "/get_users")
 		
-	def get_messages(self):
-		print("Get messages")
-		
-		self.chat_log.text = client.send("", "/get_messages")
-		
 	def send_message(self):
 		user_to_send = self.username.text
 		message_to_send = self.message.text
@@ -55,6 +50,8 @@ class ChatGrid(Widget):
 			client.send(self.username.text, self.message.text)
 			
 		self.message.text = ""
+		
+		self.chat_log.text = client.send("", "/get_messages")
 
 
 class ChatClient(App):
