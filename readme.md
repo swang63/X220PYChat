@@ -7,6 +7,7 @@
 pip install python3 (If command does not work, try type: pip3 install python3)
 ```
 or go to this link for downloading: https://www.python.org/downloads/
+
 2.Install kivy for the GUI, run
 ```sh
 pip install kivy (If command does not work, try type: pip3 install kivy)
