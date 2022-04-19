@@ -21,15 +21,15 @@ pip install kivy (If command does not work, try type: pip3 install kivy)
  ```sh 
  cd demo_01
  ```
-5. In your demo_01 directory, run
+4. In your demo_01 directory, run
 ```sh
 git clone git@github.com:swang63/X220PYChat.git
 ```
-7. To confirm the clone process is succeed, run: 
+5. To view all the files in your directory, run: 
 ```sh
 ls
 ```
-9. You should see all the files now.
+6. You should see all the files now.
 
 # To run this demo
  - On server side, run
