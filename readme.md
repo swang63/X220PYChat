@@ -5,9 +5,8 @@
 1.Install python on your local machine, run
 ```sh
 pip install python3 (If command does not work, try type: pip3 install python3) 
-or go to this link to download python: https://www.python.org/downloads/
 ```
-
+ or go to this link to download python: https://www.python.org/downloads/
 
 2.Install kivy for the GUI, run
 ```sh
