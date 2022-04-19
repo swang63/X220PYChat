@@ -4,7 +4,8 @@
 # Before running this Demo, install followings on your terminal.
 1.Install python on your local machine, run
 ```sh
-pip install python3 (If command does not work, try type: pip3 install python3) or go to this link for downloading: https://www.python.org/downloads/
+pip install python3 (If command does not work, try type: pip3 install python3) 
+or go to this link to download python: https://www.python.org/downloads/
 ```
 
 
