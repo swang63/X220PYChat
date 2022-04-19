@@ -2,7 +2,10 @@
 > Simple chat room using Raspberry Pi server with python socket programming
 
 # Before running this Demo, install followings on your terminal.
-1.Install python on your locao machine, type: pip install python (If command does not work, try type: pip3 install python)
+1.Install python on your locao machine, run
+```sh
+pip install python (If command does not work, try type: pip3 install python)
+```
 2.Install kivy for the GUI, type: pip install kivy (If command does not work, try type: pip3 install kivy)
 
 # To run this Demo on your local machine, clone the github repository and follow these steps:
