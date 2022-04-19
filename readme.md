@@ -40,6 +40,6 @@ ls
  ```
  - On client side, run
   ```sh
- python client_scripts/client_test_two.py
+ python client_scripts/chat_client.py
  ```
  
