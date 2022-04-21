@@ -22,11 +22,12 @@ class ClientSocket:
 	def connect(self):
 		self.cli_socket.connect((self.IP_to_connect_to, PORT))
 		
-	def send(self, number, name, message):
-		sentence = "[" + str(number) + "] " + name + ": " + message
+	def send(self, name, message):
+		sentence = name + ": " + message
 		self.cli_socket.send(sentence.encode())
 		modifiedSentence = self.cli_socket.recv(1024)
-		print ("Server Chat:\n", modifiedSentence.decode())
+		#print ("Server Chat:\n", modifiedSentence.decode())
+		return modifiedSentence.decode()
 	
 	def close(self):
 		self.cli_socket.close()
