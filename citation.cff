@@ -3,16 +3,16 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: "Gong"
   given-names: "Xiaoli"
-  e-mail:xgong3@student.gsu.edu
+  
 - family-names: "Prefontaine"
   given-names: "David"
-  e-mail:dprefontaine1@student.gsu.edu
+  
 - family-names: "Tran"
   given-names: "An"
-  e-mail:atran43@student.gsu.edu
+  
 - family-names: "Wang"
   given-names: "Stanley"
-  e-mail:swang63@student.gsu.edu
+  
 title: "X220PYChat"
 version: 1.0.0
 doi: 10.5281/zenodo.1234
