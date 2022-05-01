@@ -1,20 +1,24 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+title: X220PYChat
+message: Please cite this software using these metadata.
+type: software
 authors:
-- family-names: "Gong"
-  given-names: "Xiaoli"
-  
-- family-names: "Prefontaine"
-  given-names: "David"
-  
-- family-names: "Tran"
-  given-names: "An"
-  
-- family-names: "Wang"
-  given-names: "Stanley"
-  
-title: "X220PYChat"
-version: 1.0.0
-doi: 10.5281/zenodo.1234
+  - given-names: Xiaoli
+    family-names: Gong
+    email: xgong3@student.gsu.edu
+    affiliation: Georgia State University
+  - given-names: David
+    family-names: Prefontaine
+    email: dprefontaine1@student.gsu.edu
+    affiliation: Georgia State University
+  - given-names: An
+    family-names: Tran
+    email: atran43@student.gsu.edu
+    affiliation: Georgia State University
+  - given-names: Stanley
+    family-names: Wang
+    email: swang63@student.gsu.edu
+    affiliation: Georgia State University
+
 date-released: 2022-05-01
 url: "https://github.com/swang63/X220PYChat"
